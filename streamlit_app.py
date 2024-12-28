@@ -2,13 +2,14 @@ import streamlit as st
 import pickle
 import numpy as np
 import os
+
 def load_model(file_path):
-    try:
-        return pickle.load(open(file_path, 'rb')), None
-    except FileNotFoundError:
-        return None, f"Model file not found at: {file_path}"
-    except OSError as e:
-        return None, f"Error loading model file: {e}"
+try:
+    return pickle.load(open(file_path, 'rb')), None
+except FileNotFoundError:
+    return None, f"Model file not found at: {file_path}"
+except OSError as e:
+    return None, f"Error loading model file: {e}"
 
 st.sidebar.title("Disease Prediction Models")
 selected_model = st.sidebar.selectbox(
