@@ -19,7 +19,7 @@ selected_model = st.sidebar.selectbox(
 # Parkinson's Disease
 if selected_model == "Parkinson's Disease":
     st.title("Parkinson's Disease Prediction")
-    model_path = "C:\streamlit_project2\model\Scripts\Parkinson (1).pkl"
+    model_path = "Parkinson (1).pkl"
     model, error = load_model(model_path)
 
     if error:
@@ -46,7 +46,7 @@ if selected_model == "Parkinson's Disease":
 # Kidney Disease 
 elif selected_model == "Kidney Disease":
     st.title("Kidney Disease Prediction")
-    model_path = "C:\streamlit_project2\model\Scripts\Kidney_prediction.pkl"
+    model_path = "Kidney_prediction.pkl"
     model, error = load_model(model_path)
 
     if error:
@@ -107,7 +107,7 @@ elif selected_model == "Kidney Disease":
 # Liver model
 elif selected_model == "Liver Disease":
     st.title("Liver Disease Prediction")
-    model_path = "C:\streamlit_project2\model\Scripts\Liver_patient.pkl"
+    model_path = "Liver_patient.pkl"
     model, error = load_model(model_path)
 
     if error:
